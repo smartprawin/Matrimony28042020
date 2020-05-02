@@ -130,6 +130,15 @@ public static String getExcelDatappnegative(String sheetName, int rowNum, int co
 	return data;
 }
 
+public static String getExcelsearchnep5(String sheetName, int rowNum, int colNum) throws Throwable{
+	FileInputStream fis = new FileInputStream("C:\\Users\\vijay\\Desktop\\office\\matrimony.com\\Excel\\searchnep5.xlsx");
+ Workbook wb = WorkbookFactory.create(fis);
+ Sheet sh = wb.getSheet(sheetName);
+ Row row = sh.getRow(rowNum);
+ String data = row.getCell(colNum).getStringCellValue();
+	return data;
+}
+
 public static String exceladvancesearchnegative(String sheetName, int rowNum, int colNum) throws Throwable{
 	FileInputStream fis = new FileInputStream("C:\\Users\\vijay\\Desktop\\office\\matrimony.com\\Excel\\exceladvancesearchnegative.xlsx");
  Workbook wb = WorkbookFactory.create(fis);
